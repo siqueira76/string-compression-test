@@ -13,7 +13,7 @@ public class StringCompressorTest {
 		String originalString = "aaaabbbccdjhgjjlllll";
 		
 		StringCompressor compressor = new StringCompressor();
-		assertEquals("4a3b2cjhg2j5l", compressor.compressString(originalString));
+		assertEquals("a4b3c2jhgj2l5", compressor.compressString(originalString));
 	}
 
 	@Test
@@ -21,12 +21,12 @@ public class StringCompressorTest {
 		String originalString = "RRRaaaabbbMMccdjhgjjlllll";
 		
 		StringCompressor compressor = new StringCompressor();
-		assertEquals("3R4a3b2M2cjhg2j5l", compressor.compressString(originalString));
+		assertEquals("R3a4b3M2c2jhgj2l5", compressor.compressString(originalString));
 	}
 
 	@Test
 	public void compressMinimalStringAndReturnOriginal() {
-		String originalString = "aabccdjhgjjllUOO"; // 2ab2cdjhg2j2lU2O, same size
+		String originalString = "aabccdjhgjjllUOO"; // a2bc2djhgj2l2UO2, same size
 		
 		StringCompressor compressor = new StringCompressor();
 		assertEquals("aabccdjhgjjllUOO", compressor.compressString(originalString));
