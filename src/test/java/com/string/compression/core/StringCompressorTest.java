@@ -13,7 +13,7 @@ public class StringCompressorTest {
 		String originalString = "aaaabbbccdjhgjjlllll";
 		
 		StringCompressor compressor = new StringCompressor();
-		assertEquals("a4b3c2jhgj2l5", compressor.compressString(originalString));
+		assertEquals("a4b3c2djhgj2l5", compressor.compressString(originalString));
 	}
 
 	@Test
@@ -21,7 +21,7 @@ public class StringCompressorTest {
 		String originalString = "RRRaaaabbbMMccdjhgjjlllll";
 		
 		StringCompressor compressor = new StringCompressor();
-		assertEquals("R3a4b3M2c2jhgj2l5", compressor.compressString(originalString));
+		assertEquals("R3a4b3M2c2djhgj2l5", compressor.compressString(originalString));
 	}
 
 	@Test
